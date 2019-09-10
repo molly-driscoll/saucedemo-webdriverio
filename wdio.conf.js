@@ -63,21 +63,18 @@ exports.config = {
     //
     capabilities: [
 
-        {
-            browserName: 'firefox',
+        {browserName: 'firefox',
             platformName: 'Windows 10',
             browserVersion: 'latest',
-        }
+        },
         // 'sauce:options': {'seleniumVersion': '3.14.0'}
-        {
-            browserName: 'chrome',
+        {browserName: 'chrome',
             platformName: 'OS X 10.13',
-            browserVersion: 'latest'
-        }
-        {
-            browserName: 'internet explorer',
+            browserVersion: 'latest',
+        },
+        {browserName: 'internet explorer',
             platformName: 'Windows 10',
-            browserVersion: '11.0'
+            browserVersion: '11.0',
         }
 
 ],
