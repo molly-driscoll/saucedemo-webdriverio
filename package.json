@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "wdio wdio.conf.js"
+    "test": "wdio wdio.conf.js",
+    "test-spec": "npm run test -- --spec $1"
   },
   "keywords": [],
   "author": "",
