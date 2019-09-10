@@ -61,18 +61,31 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [{
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 5,
-        //
-        browserName: 'firefox',
+    capabilities: [
+
+        {
+            browserName: 'firefox',
+            platformName: 'Windows 10',
+            browserVersion: 'latest',
+        }
+        // 'sauce:options': {'seleniumVersion': '3.14.0'}
+        {
+            browserName: 'chrome',
+            platformName: 'OS X 10.13',
+            browserVersion: 'latest'
+        }
+        {
+            browserName: 'internet explorer',
+            platformName: 'Windows 10',
+            browserVersion: '11.0'
+        }
+
+],
+
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+        // excludeDriverLogs: ['bugreport', 'server']
     //
     // ===================
     // Test Configurations
