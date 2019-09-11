@@ -1,3 +1,12 @@
+const sauceOptions = {
+    'sauce:options': {
+        extendedDebugging: true,
+        capturePerformance: true,
+        //crmuxdriverVersion: 'beta',
+        build: 'Performance Build'
+    }
+}
+
 exports.config = {
     //
     // ====================
@@ -71,7 +80,7 @@ exports.config = {
         {browserName: 'chrome',
             platformName: 'OS X 10.13',
             browserVersion: 'latest',
-        },
+            ...sauceOptions},
         // {browserName: 'internet explorer',
         //     platformName: 'Windows 10',
         //     browserVersion: '11.0',
